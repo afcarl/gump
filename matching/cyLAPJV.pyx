@@ -217,7 +217,7 @@ def cy_lapjv(np.ndarray[double, ndim=2] costMat, resolution=None):
                 k2 = vk[vf]
                 cf = colsol[j2] < 0
                 if np.any(cf):  # unassigned, shortest augmenting path is complete.
-                    i2 = find(cf, 1)
+                    i2 = find(cf, 1)[0]
                     endofpath = j2[i2]
                     unassignedfound = True
                 else:
