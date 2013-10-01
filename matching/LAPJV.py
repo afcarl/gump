@@ -209,6 +209,7 @@ def lapjv(costMat, resolution=None):
                 else:
                     i2 = len(cf)+1
                 # add to list to be scaned right away
+
                 for k in range(0, i2-1):
                     collist[k2[k]] = collist[up]
                     collist[up] = j2[k]
@@ -355,5 +356,5 @@ if __name__ == '__main__':
     import sys
     N = 1
     np.random.seed(int(sys.argv[1]))
-    testAgainstMunkres(1000, 30)
+    testAgainstMunkres(100, 200)
     #testPyCySpeed()
